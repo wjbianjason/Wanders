@@ -1,0 +1,42 @@
+.dynamic-row{display:block;width:100%;margin:0;padding:0;*zoom:1}
+.dynamic-row:before,.dynamic-row:after{content:"";display:table}
+.dynamic-row:after{clear:both}
+.dynamic-row>[class*="column"]:first-child{margin-left:0}
+body{
+	background:#fff;
+}
+.title-wrapper{
+	margin:0 auto;
+	text-align:center;
+	padding-bottom:40px;
+}
+.title-wrapper.choose-account{
+	padding:50px 0;
+}
+.choose-account-fullblock{
+	padding:40px 250px 60px;
+	background:#f8f8f8;
+}
+.choose-account-wrapper .box.service-pro-account,
+.choose-account-wrapper .box.standard-account{
+	padding:40px;
+	width:340px;
+	float:left;
+	clear:none;
+}
+.choose-account-wrapper .box.service-pro-account{
+	background-image: url(../css/wiker.jpg);
+}
+.choose-account-wrapper .box.standard-account{
+	background-image: url(../css/hirer.jpg);
+	float: right;
+}
+.bottom-link-wrapper{
+	padding-top:50px;
+	padding-bottom:50px;
+	text-align:center;
+}
+.bottom-link-wrapper .separator{
+	padding:0 10px;
+	color:#d2d2d2;
+}

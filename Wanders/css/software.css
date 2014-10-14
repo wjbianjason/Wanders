@@ -1,0 +1,43 @@
+.header{
+	background:#222;
+	background-repeat:no-repeat;
+	background-position:center 0;
+	background-size:cover;
+	padding:138px 0 0;
+	text-align:center;
+	min-height:400px;position:relative
+}
+.logoimg{
+	position:absolute;
+	left:1%;right:1%;
+	bottom:-40px
+}
+.logotxt{
+	margin-bottom:30px;
+	border:0
+}
+.logotxt a{
+	font-weight:700;
+	color:#fff;
+	font-size:64px
+}
+.header h2{
+	text-align: center;
+	color:#fff;
+	padding:0;
+	margin:0 0 45px;
+	font-weight:100;
+	font-size:34px
+}
+.container{
+	width: 980px;
+}
+.row h2{
+	font-size: 20px;
+}
+.row #col-border{
+	text-align: center;
+	margin-top: 50px;
+	margin-right: -10px;
+	border:1px solid #efefef;
+}
