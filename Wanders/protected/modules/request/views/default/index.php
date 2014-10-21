@@ -14,13 +14,29 @@ $this->breadcrumbs=array(
 );
 ?>
 
-<?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'request-form',
-	'enableClientValidation'=>true,
-	'clientOptions'=>array(
-		'validateOnSubmit'=>true,
-	),
-)); ?>
+<?php
+if($sort==0) 
+{
+$form=$this->beginWidget('CActiveForm', array(
+'id'=>'request-form',
+'action'=>'http://localhost/Wanders/Wanders/index.php?r=Software',
+'enableClientValidation'=>true,
+'clientOptions'=>array('validateOnSubmit'=>true,),
+));
+$_GET['sort']=0;
+} 
+else if($sort==1)
+{
+$form=$this->beginWidget('CActiveForm', array(
+'id'=>'request-form',
+'action'=>'http://localhost/Wanders/Wanders/index.php?r=Hardware',
+'enableClientValidation'=>true,
+'clientOptions'=>array('validateOnSubmit'=>true,),
+));
+$_GET['sort']=1;
+}
+
+?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
@@ -33,7 +49,7 @@ $this->breadcrumbs=array(
 	</div>
 	<div class="row">
 		<?php echo $form->labelEx($model,'kind'); ?>
-		<?php echo $form->textField($model,'kind',array('id'=>'kind','onFocus'=>'setter()','onBlur'=>'getter()')); ?>
+		<?php echo $form->textField($model,'kind',array('onFocus'=>'setter()','onBlur'=>'getter()')); ?>
 		<div id="kindLabel"></div>
 		<?php echo $form->error($model,'kind'); ?>
 	</div>
@@ -51,9 +67,9 @@ $this->breadcrumbs=array(
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'body'); ?>
-		<?php echo $form->textArea($model,'body',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'body'); ?>
+		<?php echo $form->labelEx($model,'content'); ?>
+		<?php echo $form->textArea($model,'content',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->error($model,'content'); ?>
 	</div>
 
 	<?php if(CCaptcha::checkRequirements()): ?>
@@ -85,11 +101,11 @@ function getter()
 }
 function phpSet()
 {
-	document.getElementById('kind').value +='php ';
+	document.getElementById('RequestForm_kind').value +='php ';
 }
 function androidSet()
 {
-	document.getElementById('kind').value +='android ';
+	document.getElementById('RequestForm_kind').value +='android ';
 }
 </script>
 </body>

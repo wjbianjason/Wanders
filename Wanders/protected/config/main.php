@@ -57,7 +57,7 @@ return array(
 			'connectionString' => 'mysql:host=localhost;dbname=yii',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => '624386547',
+			'password' => 'root',
 			'charset' => 'utf8',
 			'tablePrefix'=>'nb_',
 		),
