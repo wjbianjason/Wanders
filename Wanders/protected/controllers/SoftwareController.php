@@ -28,7 +28,6 @@ class SoftwareController extends Controller
 	 */
 	public function actionIndex()
 	{
-<<<<<<< HEAD
 		if(isset($_POST['RequestForm']))
 		{
 			$model=new RequestForm;
@@ -51,14 +50,6 @@ class SoftwareController extends Controller
 		//echo $result;
 		//echo $result;
 		while($port=$result->read())
-=======
-		// renders the view file 'protected/views/site/index.php'
-		// using the default layout 'protected/views/layouts/main.php'
-		$connection=Yii::app()->db;
-		$sql='select title from nb_software';
-		$result=$connection->createCommand($sql)->query();
-		while(($port=$result->read())!==false)
->>>>>>> origin/master
 		{
 			$name[]=$port['title'];
 			$id[]=$port['id'];
